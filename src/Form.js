@@ -4,13 +4,11 @@ export default class Form extends React.Component {
     constructor() {
         super();
         this.state = {
-            data: {
                 person: null,
                 work: null,
                 birthday: null,
                 gender: null,
                 employ: null
-            }
         };
     }
 
@@ -18,13 +16,15 @@ export default class Form extends React.Component {
         e.preventDefault();
         const { person, work, birthday, gender, employ } = this.state;
         this.props.onAddItem({ person, work, birthday, gender, employ });
+
     };
 
     onChangeItem = e => {
         e.preventDefault();
         const { person, work, birthday, gender, employ } = this.state;
         this.props.onChangeItem({ person, work, birthday, gender, employ });
-    }
+
+    };
 
     handlePersonChange = e => {
         this.setState({ person: e.currentTarget.value });
@@ -39,11 +39,12 @@ export default class Form extends React.Component {
     };
 
     handleGenderChange = e => {
-        this.setState({ gender: e.currentTarget.value });
+        this.setState({ gender: e.currentTarget.checked});
+        console.log(e.currentTarget.checked);
     };
 
     handleEmployChange = e => {
-        this.setState({ employ: e.currentTarget.value });
+        this.setState({ employ: e.currentTarget.checked });
     };
 
     render() {
@@ -70,7 +71,6 @@ export default class Form extends React.Component {
                     </div>
                     <label>ФИО </label>
                     <input
-                        // ref={this.input}
                         id="fio"
                         type="text"
                         required={true}
@@ -130,9 +130,8 @@ export default class Form extends React.Component {
                         Уволен
                         <input
                             type="checkbox"
-                            // ref="employRef"
                             id="employ"
-                            defaultChecked={this.props.data ? this.props.data.employ : null}
+                            defaultChecked={this.props.data ? this.props.data.employ : this.state.employ}
                             onChange={this.handleEmployChange}
                         />
                     </label>

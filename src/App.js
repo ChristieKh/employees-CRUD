@@ -52,11 +52,11 @@ export default class App extends Component {
     handleChangeItem = data => {
         let newData = this.state.data;
         const activeItem = this.state.activeItem;
-        data.person  ? newData[activeItem].person = data.person : newData[activeItem].person = this.state.data[activeItem].person;
-        data.work  ? newData[activeItem].work = data.work : newData[activeItem].work = this.state.data[activeItem].work;
-        data.birthday  ? newData[activeItem].birthday = data.birthday : newData[activeItem].birthday = this.state.data[activeItem].birthday;
-        data.gender  ? newData[activeItem].gender = data.gender : newData[activeItem].gender = this.state.data[activeItem].gender;
-        data.employ  ? newData[activeItem].employ = data.employ : newData[activeItem].employ = this.state.data[activeItem].employ;
+        data ? newData[activeItem].person = data.person : newData[activeItem].person = this.state.data[activeItem].person;
+        data ? newData[activeItem].work = data.work : newData[activeItem].work = this.state.data[activeItem].work;
+        data ? newData[activeItem].birthday = data.birthday : newData[activeItem].birthday = this.state.data[activeItem].birthday;
+        data ? newData[activeItem].gender = data.gender : newData[activeItem].gender = this.state.data[activeItem].gender;
+        data ? newData[activeItem].employ = data.employ : newData[activeItem].employ = this.state.data[activeItem].employ;
 
         this.setState({
             ...this.state,
