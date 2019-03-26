@@ -1,88 +1,79 @@
 import React from 'react';
 
 export default class Form extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-                person: null,
-                work: null,
-                birthday: null,
-                gender: null,
-                employ: null
-        };
-    }
+    state = {
+        person: null,
+        work: null,
+        birthday: null,
+        gender: null,
+        employ: null,
+        validationError: false
+    };
 
     onBtnClickAddHandler = e => {
+        const {person, work, birthday, gender, employ} = this.state;
+        if (person === null || work === null || birthday === null || gender === null || employ === null) {
+            this.setState({validationError: true})
+        } else {
+            this.props.onAddItem({person, work, birthday, gender, employ});
+            this.setState({validationError: false})
+        }
         e.preventDefault();
-        const { person, work, birthday, gender, employ } = this.state;
-        this.props.onAddItem({ person, work, birthday, gender, employ });
-
     };
 
     onChangeItem = e => {
+        const {person, work, birthday, gender, employ} = this.state;
+        this.props.onChangeItem({person, work, birthday, gender, employ});
         e.preventDefault();
-        const { person, work, birthday, gender, employ } = this.state;
-        this.props.onChangeItem({ person, work, birthday, gender, employ });
-
     };
 
     handlePersonChange = e => {
-        this.setState({ person: e.currentTarget.value });
+        this.setState({person: e.target.value});
     };
 
     handleWorkChange = e => {
-        this.setState({ work: e.currentTarget.value });
+        this.setState({work: e.target.value});
     };
 
     handleBirthdayChange = e => {
-        this.setState({ birthday: e.currentTarget.value });
+        this.setState({birthday: e.target.value});
     };
 
     handleGenderChange = e => {
-        this.setState({ gender: e.currentTarget.checked});
-        console.log(e.currentTarget.checked);
+        this.setState({gender: e.target.checked});
     };
 
     handleEmployChange = e => {
-        this.setState({ employ: e.currentTarget.checked });
+        this.setState({employ: e.target.checked});
     };
 
     render() {
+        const {data, onDeleteItem} = this.props;
         return (
-            <div className="form__box">
-                <form className="form" method="" action="">
-                    <div className="buttons">
-                        <button
-                            type="submit"
-                            className="btn btn-add"
-                            value="submit"
-                            onClick={this.onBtnClickAddHandler}
-                        >
+            <div className="form__box card">
+                <form className="form card-content">
+                    {this.state.validationError && <p className="validation-error">Заполните все поля!</p>}
+                    <div className="buttons ">
+                        <button className="btn btn-add blue"
+                                onClick={this.onBtnClickAddHandler} >
                             Добавить сотрудника
                         </button>
-                        <button
-                            type="submit"
-                            className="btn btn-del"
-                            value="submit"
-                            onClick={() => this.props.onDeleteItem(this.props.activeItem)}
-                        >
+                        <button className="btn btn-del blue"
+                                onClick={() => onDeleteItem(this.props.activeItem)}>
                             Удалить сотрудника
                         </button>
                     </div>
                     <label>ФИО </label>
-                    <input
-                        id="fio"
-                        type="text"
-                        required={true}
-                        defaultValue={
-                            this.props.data ? this.props.data.person : this.state.person
-                        }
-                        onChange={this.handlePersonChange}
+                    <input id="fio"
+                           type="text"
+                           required={true}
+                           defaultValue={data ? data.person : this.state.person}
+                           onChange={this.handlePersonChange}
                     />
                     <label>Должность</label>
                     <select onChange={this.handleWorkChange} name="option" id="work">
                         <option selected disabled hidden>
-                            {this.props.data ? this.props.data.work : null}
+                            {data && data.work}
                         </option>
                         <option value="Разработчик">Разработчик</option>
                         <option value="Дизайнер">Дизайнер</option>
@@ -94,50 +85,37 @@ export default class Form extends React.Component {
                         type="date"
                         id="bday"
                         onChange={this.handleBirthdayChange}
-                        defaultValue={this.props.data ? this.props.data.birthday : null}
+                        defaultValue={data && data.birthday}
                     />
-
                     <label className="gender">Пол </label>
                     <div className="radio">
                         <label>
-                            <input
-                                type="radio"
-                                className="radio"
-                                name="gender"
-                                value="m"
-                                defaultChecked={
-                                    this.props.data ? this.props.data.gender === "m" : null
-                                }
-                                onChange={this.handleGenderChange}
-                            />м
+                            <input type="radio"
+                                   className="radio"
+                                   name="gender"
+                                   value="m"
+                                   defaultChecked={data && data.gender === "m"}
+                                   onChange={this.handleGenderChange}/>м
                         </label>
                     </div>
                     <div className="radio">
                         <label>
-                            <input
-                                type="radio"
-                                className="radio"
-                                name="gender"
-                                value="w"
-                                defaultChecked={
-                                    this.props.data ? this.props.data.gender === "w" : null
-                                }
-                                onChange={this.handleGenderChange}
-                            />ж
+                            <input type="radio"
+                                   className="radio"
+                                   name="gender"
+                                   value="w"
+                                   defaultChecked={data && data.gender === "w"}
+                                   onChange={this.handleGenderChange}/>ж
                         </label>
                     </div>
-                    <label>
-                        Уволен
-                        <input
-                            type="checkbox"
-                            id="employ"
-                            defaultChecked={this.props.data ? this.props.data.employ : this.state.employ}
-                            onChange={this.handleEmployChange}
-                        />
+                    <label className="employ">
+                        <input type="checkbox"
+                               id="employ"
+                               defaultChecked={data ? data.employ : this.state.employ}
+                               onChange={this.handleEmployChange}/>
+                        Сотрудник уволен
                     </label>
-                    <button className="btn" type="submit" value="submit" onClick={this.onChangeItem}>
-                        Изменить
-                    </button>
+                    <button className="btn blue" onClick={this.onChangeItem}>Изменить</button>
                 </form>
             </div>
         );
