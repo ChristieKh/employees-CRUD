@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from "react";
-import Cards from "./Cards";
-import Form from "./Form";
-import {data} from "./Employees";
+import Cards from "./containers/Cards";
+import Form from "./containers/Form";
+import {data} from "./containers/Employees";
 
 export default class App extends Component {
     state = {
@@ -47,12 +47,11 @@ export default class App extends Component {
         const {data, activeItem} = this.state;
         let newData = data;
         const newDataItem = newData[activeItem];
-        dataItem ? newDataItem.person = data.person : newDataItem.person = data[activeItem].person;
-        dataItem ? newDataItem.work = data.work : newDataItem.work = data[activeItem].work;
-        dataItem ? newDataItem.birthday = data.birthday : newDataItem.birthday = data[activeItem].birthday;
-        dataItem ? newDataItem.gender = data.gender : newDataItem.gender = data[activeItem].gender;
-        dataItem ? newDataItem.employ = data.employ : newDataItem.employ = data[activeItem].employ;
-
+        dataItem.person ? newDataItem.person = dataItem.person : newDataItem.person = data[activeItem].person;
+        dataItem.work ? newDataItem.work = dataItem.work : newDataItem.work = data[activeItem].work;
+        dataItem.birthday ? newDataItem.birthday = dataItem.birthday : newDataItem.birthday = data[activeItem].birthday;
+        dataItem.gender ? newDataItem.gender = dataItem.gender : newDataItem.gender = data[activeItem].gender;
+        dataItem.employ ? newDataItem.employ = dataItem.employ : newDataItem.employ = data[activeItem].employ;
         this.setState({
             ...this.state,
             data: newData

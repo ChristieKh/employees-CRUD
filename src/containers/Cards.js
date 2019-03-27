@@ -1,9 +1,9 @@
 import React from 'react';
-import ItemCard from './ItemCard';
+import ItemCard from '../components/ItemCard';
 
 export default function Card({data, selectItem}) {
 
-    let employees = data.map((employer, index) => {
+   const employees = data.map((employer, index) => {
         return (
             <div className="card item"
                  id={index}
