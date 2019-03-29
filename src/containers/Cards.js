@@ -1,15 +1,15 @@
 import React from 'react';
 import ItemCard from '../components/ItemCard';
 
-export default function Card({data, selectItem}) {
+export default function Card({data, selectItem, activeItem}) {
 
-   const employees = data.map((employer, index) => {
+   const employees = data.map((employer) => {
+       const {id} = employer;
         return (
             <div className="card item"
-                 id={index}
-                 key={index}
-                 onClick={() => {selectItem(index)}}>
-                <ItemCard data={employer} index={index}/>
+                 key={id}
+                 onClick={() => {selectItem(id)}}>
+                <ItemCard data={employer} activeItem={activeItem === id ? activeItem : null}/>
             </div>
         );
     });

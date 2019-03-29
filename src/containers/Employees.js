@@ -1,5 +1,6 @@
 export const data = [
     {
+        id: 1,
         person: "Печорин Роман Денисович",
         work: "Разработчик",
         birthday: "2014-02-01",
@@ -7,6 +8,7 @@ export const data = [
         employ: true
     },
     {
+        id: 2,
         person: "Васильева Ирина Петровна",
         work: "Аналитик",
         birthday: "1992-12-25",
@@ -14,6 +16,7 @@ export const data = [
         employ: true
     },
     {
+        id: 3,
         person: "Данилов Кирилл Сергеевич",
         work: "Тестировщик",
         birthday: "1994-01-01",

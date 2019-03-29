@@ -6,31 +6,13 @@ import {data} from "./containers/Employees";
 export default class App extends Component {
     state = {
         data: data,
-        activeItem: -1
+        activeItem: null
     };
 
     selectItem = index => {
-        const elementNew = document.getElementById(index).firstChild;
-        const elementOld = this.state.activeItem > -1 ? document.getElementById(this.state.activeItem).firstChild : null;
-
-        if (elementOld !== elementNew) {
-            if (elementOld !== null) {
-                elementOld.classList.remove("colorAdd");
-                elementNew.classList.add("colorAdd");
-            } else {
-                elementNew.classList.add("colorAdd");
-            }
-            this.setState({
-                ...this.state,
-                activeItem: index
-            });
-        } else {
-            elementNew.classList.remove("colorAdd");
-            this.setState({
-                ...this.state,
-                activeItem: -1
-            });
-        }
+        this.setState({
+            activeItem: index === this.state.activeItem ? null : index
+        })
     };
 
     handleAddItem = data => {
@@ -72,9 +54,10 @@ export default class App extends Component {
                 <div className="container grid-container-main">
                     <Cards className="grid-container-left"
                            data={data}
-                           selectItem={this.selectItem}/>
+                           selectItem={this.selectItem}
+                           activeItem={activeItem}/>
                     <Form className="grid-container-right"
-                          data={activeItem > -1 && data[activeItem]}
+                          data={data[activeItem - 1]}
                           onAddItem={this.handleAddItem}
                           onDeleteItem={this.handleRemoveItem}
                           onChangeItem={this.handleChangeItem}/>
