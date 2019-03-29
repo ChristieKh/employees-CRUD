@@ -57,7 +57,7 @@ export default class Form extends React.Component {
                     {this.state.validationError &&
                     <div className="card-panel red darken-1 center">Заполните все поля!</div>}
                     <ButtonsForChangeItem addItem={this.onBtnClickAddHandler}
-                                          deleteItem={() => onDeleteItem(this.props.activeItem)}/>
+                                          deleteItem={(event) => onDeleteItem(this.props.activeItem, event)}/>
                     <label>ФИО</label>
                     <input ref={this.personRef}
                            type="text"

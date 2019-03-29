@@ -20,9 +20,10 @@ export default class App extends Component {
         this.setState({data: nextItem});
     };
 
-    handleRemoveItem = activeItem => {
+    handleRemoveItem = (activeItem, e) => {
         data.splice(activeItem, 1);
         this.setState({data});
+        e.preventDefault();
     };
 
     handleChangeItem = dataItem => {
@@ -38,6 +39,7 @@ export default class App extends Component {
             ...this.state,
             data: newData
         });
+
     };
 
     render() {
