@@ -1,0 +1,19 @@
+.Page {
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    background: #f6f5f8;
+    width: 85%;
+    margin: 44px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.Text {
+  margin: 0;
+  padding: 10px;
+  background: #ffffff;
+  font-size: 2.5rem;
+  text-align: center;
+}

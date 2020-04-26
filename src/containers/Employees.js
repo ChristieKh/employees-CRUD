@@ -1,4 +1,4 @@
-export const data = [
+export const employeesData = [
     {
         id: 1,
         person: "Печорин Роман Денисович",
