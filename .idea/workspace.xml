@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee997a5-07c3-4686-bfb7-97425a77f9f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/page/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonsForChangeItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonsForChangeItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ItemCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Employees.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Employees.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +32,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-20" />
-    <option name="y" value="45" />
-    <option name="width" value="1389" />
-    <option name="height" value="650" />
   </component>
   <component name="ProjectId" id="1b5C5d0h15aLH3DLfQbpsha7OcT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -118,7 +109,7 @@
       <workItem from="1553615023270" duration="4610000" />
       <workItem from="1553660964121" duration="7629000" />
       <workItem from="1553857426068" duration="1810000" />
-      <workItem from="1587912387695" duration="4625000" />
+      <workItem from="1587912387695" duration="6318000" />
     </task>
     <task id="LOCAL-00001" summary="refactoring #1">
       <created>1553619481587</created>
@@ -134,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553667752570</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="new refactoring">
+      <created>1587928171737</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587928171737</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,9 +141,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactoring #1" />
     <MESSAGE value="refactoring #2" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring #2" />
+    <MESSAGE value="new refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="new refactoring" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="347" y="154" key="CommitChangelistDialog2" timestamp="1587928171524">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="347" y="154" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1587928171524" />
     <state width="1771" height="378" key="GridCell.Tab.0.bottom" timestamp="1587912735005">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -162,5 +165,9 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1771" height="378" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587912735004" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1587928179027">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1587928179027" />
   </component>
 </project>

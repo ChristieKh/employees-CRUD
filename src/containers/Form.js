@@ -49,6 +49,11 @@ export default class Form extends React.Component {
         })
     };
 
+    handleDeleteItem = (e) => {
+        e.preventDefault();
+
+    }
+
     render() {
         const {data, onDeleteItem} = this.props;
         return (
@@ -57,7 +62,7 @@ export default class Form extends React.Component {
                     {this.state.validationError &&
                     <div className="card-panel red darken-1 center">Заполните все поля!</div>}
                     <ButtonsForChangeItem addItem={this.onBtnClickAddHandler}
-                                          deleteItem={(event) => onDeleteItem(this.props.activeItem, event)}/>
+                                          deleteItem={onDeleteItem}/>
                     <label>ФИО</label>
                     <input ref={this.personRef}
                            type="text"

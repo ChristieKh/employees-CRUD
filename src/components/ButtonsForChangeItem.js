@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {memo} from 'react';
 
-const ButtonsForChangeItem = ({addItem, deleteItem}) => {
-    return (
+const ButtonsForChangeItem = memo(({addItem, deleteItem}) => (
         <div className="buttons">
             <button className="btn btn-add blue"
                     onClick={addItem}>
@@ -13,6 +12,6 @@ const ButtonsForChangeItem = ({addItem, deleteItem}) => {
             </button>
         </div>
     )
-};
+);
 
 export default ButtonsForChangeItem;

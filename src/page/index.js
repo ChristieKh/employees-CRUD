@@ -14,20 +14,19 @@ export const Page = memo(() => {
 
     const [activeItem, setActiveItem] = useState(null);
 
-    const selectItem = useCallback((e,id )=> {
-        console.info('id',id)
-        setActiveItem(id !== activeItem ? id : null)
-    } ,[])
+    const selectItem = useCallback(id => setActiveItem(id !== activeItem ? id : null),[])
 
     const handleAddItem = data => {
         const nextItem = [...this.state.data, data];
         this.setState({employeesData: nextItem});
     };
 
-    const handleRemoveItem = (activeItem, e) => {
-        employeesData.splice(activeItem, 1);
-        this.setState({employees});
-        e.preventDefault();
+    const handleRemoveItem = () => {
+        console.info('employeesData', employeesData, activeItem)
+
+        // employeesData.splice(activeItem, 1);
+        // this.setState({employees});
+        // e.preventDefault();
     };
 
     const handleChangeItem = dataItem => {
@@ -53,15 +52,17 @@ export const Page = memo(() => {
                     <h1 className={cn('Text')}>Список сотрудников</h1>
                 </div>
                 <div className={cn(`${COMPONENT_STYLE_NAME}__content`)}>
-                    <CardsEmployees className="grid-container-left"
-                                    data={employees}
-                                    selectItem={selectItem}
-                                    activeItem={activeItem}/>
-                    <Form className="grid-container-right"
-                          data={employees[activeItem - 1]}
-                          onAddItem={handleAddItem}
-                          onDeleteItem={handleRemoveItem}
-                          onChangeItem={handleChangeItem}/>
+                    <div className={cn(`${COMPONENT_STYLE_NAME}__cards-box`)}>
+                        <CardsEmployees data={employees}
+                                        selectItem={selectItem}
+                                        activeItem={activeItem}/>
+                    </div>
+                    <div className={cn(`${COMPONENT_STYLE_NAME}__form-box`)}>
+                        <Form data={employees[activeItem - 1]}
+                              onAddItem={handleAddItem}
+                              onDeleteItem={handleRemoveItem}
+                              onChangeItem={handleChangeItem}/>
+                    </div>
                 </div>
             </div>
         </div>

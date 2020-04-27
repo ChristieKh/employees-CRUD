@@ -8,6 +8,23 @@
     margin: 44px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
+
+  &__content {
+    display: flex;
+    padding-top: 20px;
+  }
+
+  &__cards-box, &__form-box {
+    padding: 0 20px;
+  }
+
+  &__cards-box {
+    width: 65%;
+  }
+
+  &__form-box {
+    width: 30%;
+  }
 }
 
 .Text {
