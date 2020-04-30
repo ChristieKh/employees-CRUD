@@ -1,0 +1,9 @@
+.Item-card {
+  &__block {
+    display: flex;
+  }
+
+  &__label {
+    padding-right: 10px;
+  }
+}

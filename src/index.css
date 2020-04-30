@@ -3,3 +3,8 @@ html, body, #id {
   padding: 0;
   height: 100%;
 }
+
+p {
+  padding: 0;
+  margin: 0;
+}

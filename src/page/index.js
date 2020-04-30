@@ -53,7 +53,7 @@ export const Page = memo(() => {
                 </div>
                 <div className={cn(`${COMPONENT_STYLE_NAME}__content`)}>
                     <div className={cn(`${COMPONENT_STYLE_NAME}__cards-box`)}>
-                        <CardsEmployees data={employees}
+                        <CardsEmployees employeesData={employees}
                                         selectItem={selectItem}
                                         activeItem={activeItem}/>
                     </div>
