@@ -1,8 +1,8 @@
 import React, {memo, useState, useCallback} from 'react'
 import classnames from 'classnames/bind';
 import {CardsEmployees} from "./_components/cards-employees";
-import Form from "../containers/Form";
-import {employeesData} from "../containers/Employees";
+import {EditableEmployerForm} from "./_components/editable-employer-form";
+import {employeesData} from "./_constants/employees";
 import styles from './index.module.scss';
 
 const cn = classnames.bind(styles);
@@ -14,7 +14,7 @@ export const Page = memo(() => {
 
     const [activeItem, setActiveItem] = useState(null);
 
-    const selectItem = useCallback(id => setActiveItem(id !== activeItem ? id : null),[])
+    const selectItem = useCallback(id => setActiveItem(id !== activeItem ? id : null),[activeItem])
 
     const handleAddItem = data => {
         const nextItem = [...this.state.data, data];
@@ -30,19 +30,18 @@ export const Page = memo(() => {
     };
 
     const handleChangeItem = dataItem => {
-        const {employeesData, activeItem} = this.state;
-        let newData = employeesData;
-        const newDataItem = newData[activeItem];
+        // const {employeesData, activeItem} = this.state;
+        // let newData = employeesData;
+        // const newDataItem = newData[activeItem];
         // dataItem.person ? newDataItem.person = dataItem.person : newDataItem.person = data[activeItem].person;
         // dataItem.work ? newDataItem.work = dataItem.work : newDataItem.work = data[activeItem].work;
         // dataItem.birthday ? newDataItem.birthday = dataItem.birthday : newDataItem.birthday = data[activeItem].birthday;
         // dataItem.gender ? newDataItem.gender = dataItem.gender : newDataItem.gender = data[activeItem].gender;
         // dataItem.employ ? newDataItem.employ = dataItem.employ : newDataItem.employ = data[activeItem].employ;
-        this.setState({
-            ...this.state,
-            data: newData
-        });
-
+        // this.setState({
+        //     ...this.state,
+        //     data: newData
+        // });
     };
 
     return (
@@ -58,10 +57,10 @@ export const Page = memo(() => {
                                         activeItem={activeItem}/>
                     </div>
                     <div className={cn(`${COMPONENT_STYLE_NAME}__form-box`)}>
-                        <Form data={employees[activeItem - 1]}
-                              onAddItem={handleAddItem}
-                              onDeleteItem={handleRemoveItem}
-                              onChangeItem={handleChangeItem}/>
+                        <EditableEmployerForm data={employees[activeItem - 1]}
+                               onAddItem={handleAddItem}
+                               onDeleteItem={handleRemoveItem}
+                               onChangeItem={handleChangeItem}/>
                     </div>
                 </div>
             </div>

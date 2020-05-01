@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aee997a5-07c3-4686-bfb7-97425a77f9f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card/ItemCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/index.module.scss" afterDir="false" />
+    <list default="true" id="aee997a5-07c3-4686-bfb7-97425a77f9f0" name="Default Changelist" comment="new refactoring - card">
+      <change afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ItemCard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/_components/cards-employees/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonsForChangeItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Employees.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_constants/employees.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card/index.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/index.module.scss" afterDir="false" />
     </list>
@@ -23,12 +30,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>onDeleteItem</find>
-      <find>console.</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,17 +60,28 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/page/_constants" />
+      <recent name="$PROJECT_DIR$/src/page/_components" />
+      <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/editable-employer-form" />
+      <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card" />
+      <recent name="$PROJECT_DIR$/src/page/_components/cards-employees" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card" />
-      <recent name="$PROJECT_DIR$/src/page/_components/cards-employees" />
-      <recent name="C:\Users\Chris\Projects\employees-test\src\components" />
-      <recent name="C:\Users\Chris\Projects\employees-test\src\containers" />
-    </key>
   </component>
-  <component name="RunManager" selected="npm.deploy">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -90,10 +102,22 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.predeploy" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -114,7 +138,8 @@
       <workItem from="1553660964121" duration="7629000" />
       <workItem from="1553857426068" duration="1810000" />
       <workItem from="1587912387695" duration="6341000" />
-      <workItem from="1588273553341" duration="2812000" />
+      <workItem from="1588273553341" duration="3860000" />
+      <workItem from="1588325337700" duration="3680000" />
     </task>
     <task id="LOCAL-00001" summary="refactoring #1">
       <created>1553619481587</created>
@@ -144,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587975149893</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new refactoring - card">
+      <created>1588277115351</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588277115351</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,32 +187,45 @@
     <MESSAGE value="refactoring #2" />
     <MESSAGE value="new refactoring" />
     <MESSAGE value="new refactoring&#10;&#10;added styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="new refactoring&#10;&#10;added styles" />
+    <MESSAGE value="new refactoring - card" />
+    <option name="LAST_COMMIT_MESSAGE" value="new refactoring - card" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="347" y="154" key="CommitChangelistDialog2" timestamp="1587975149753">
+    <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588327913240">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="347" y="154" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1587975149753" />
-    <state width="1771" height="378" key="GridCell.Tab.0.bottom" timestamp="1587975155811">
+    <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1588327913240" />
+    <state x="347" y="154" key="CommitChangelistDialog2" timestamp="1588325160487">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="378" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587975155811" />
-    <state width="1771" height="378" key="GridCell.Tab.0.center" timestamp="1587975155809">
+    <state x="347" y="154" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1588325160487" />
+    <state width="1771" height="328" key="GridCell.Tab.0.bottom" timestamp="1588328840852">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="378" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587975155809" />
-    <state width="1771" height="378" key="GridCell.Tab.0.left" timestamp="1587975155809">
+    <state width="1771" height="328" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1588328840852" />
+    <state width="1771" height="328" key="GridCell.Tab.0.center" timestamp="1588328840851">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="378" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587975155809" />
-    <state width="1771" height="378" key="GridCell.Tab.0.right" timestamp="1587975155810">
+    <state width="1771" height="328" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1588328840851" />
+    <state width="1771" height="328" key="GridCell.Tab.0.left" timestamp="1588328840850">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="378" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587975155810" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1587975152992">
+    <state width="1771" height="328" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1588328840850" />
+    <state width="1771" height="328" key="GridCell.Tab.0.right" timestamp="1588328840851">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1587975152992" />
+    <state width="1771" height="328" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1588328840851" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1588277118925">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1588277118925" />
+    <state x="684" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588325158016">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="684" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1588325158016" />
+    <state x="597" y="315" width="598" height="490" key="find.popup" timestamp="1588329367766">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="597" y="315" width="598" height="490" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1588329367766" />
   </component>
 </project>
