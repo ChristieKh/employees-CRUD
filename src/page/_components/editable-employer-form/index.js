@@ -7,10 +7,15 @@ export class EditableEmployerForm extends Component {
 
     handleDeleteEmployer = () => {};
 
+    onSubmit = (values) => {
+        console.info('values', values);
+    }
+
     render() {
         return (
             <EditableEmployerFormView handleAddNewEmployer={this.handleAddNewEmployer}
-                                      handleDeleteEmployer={this.handleDeleteEmployer}/>
+                                      handleDeleteEmployer={this.handleDeleteEmployer}
+                                      onSubmit={this.onSubmit}/>
         );
     }
 }

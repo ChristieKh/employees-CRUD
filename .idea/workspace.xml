@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aee997a5-07c3-4686-bfb7-97425a77f9f0" name="Default Changelist" comment="new refactoring - card">
-      <change afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.module.scss" afterDir="false" />
+    <list default="true" id="aee997a5-07c3-4686-bfb7-97425a77f9f0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/_components/edit-form/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ButtonsForChangeItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Employees.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_constants/employees.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card/index.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/_components/editable-employer-form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1b5C5d0h15aLH3DLfQbpsha7OcT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -51,8 +43,8 @@
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="C:/Users/root/WebstormProjects/test-staff/node_modules/eslint" />
-    <property name="node.js.selected.package.standard" value="C:\Users\root\WebstormProjects\test-staff\node_modules\eslint" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="C:/Users/root/WebstormProjects/test-staff/node_modules/eslint" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -139,7 +131,7 @@
       <workItem from="1553857426068" duration="1810000" />
       <workItem from="1587912387695" duration="6341000" />
       <workItem from="1588273553341" duration="3860000" />
-      <workItem from="1588325337700" duration="3680000" />
+      <workItem from="1588325337700" duration="6625000" />
     </task>
     <task id="LOCAL-00001" summary="refactoring #1">
       <created>1553619481587</created>
@@ -176,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588277115351</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new refactoring - card">
+      <created>1588329749523</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588329749523</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,34 +190,42 @@
     <option name="LAST_COMMIT_MESSAGE" value="new refactoring - card" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="628" y="297" key="#ESLint" timestamp="1588347921388">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="628" y="297" key="#ESLint/0.0.1792.1120@0.0.1792.1120" timestamp="1588347921388" />
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588327913240">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1588327913240" />
-    <state x="347" y="154" key="CommitChangelistDialog2" timestamp="1588325160487">
+    <state x="347" y="154" key="CommitChangelistDialog2" timestamp="1588329749213">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="347" y="154" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1588325160487" />
-    <state width="1771" height="328" key="GridCell.Tab.0.bottom" timestamp="1588328840852">
+    <state x="347" y="154" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1588329749213" />
+    <state x="548" y="345" key="EditFileWatcherDialog" timestamp="1588347964243">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1588328840852" />
-    <state width="1771" height="328" key="GridCell.Tab.0.center" timestamp="1588328840851">
+    <state x="548" y="345" key="EditFileWatcherDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1588347964243" />
+    <state width="1771" height="328" key="GridCell.Tab.0.bottom" timestamp="1588423929040">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1588328840851" />
-    <state width="1771" height="328" key="GridCell.Tab.0.left" timestamp="1588328840850">
+    <state width="1771" height="328" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1588423929040" />
+    <state width="1771" height="328" key="GridCell.Tab.0.center" timestamp="1588423929039">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1588328840850" />
-    <state width="1771" height="328" key="GridCell.Tab.0.right" timestamp="1588328840851">
+    <state width="1771" height="328" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1588423929039" />
+    <state width="1771" height="328" key="GridCell.Tab.0.left" timestamp="1588423929038">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1588328840851" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1588277118925">
+    <state width="1771" height="328" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1588423929038" />
+    <state width="1771" height="328" key="GridCell.Tab.0.right" timestamp="1588423929040">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1588277118925" />
+    <state width="1771" height="328" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1588423929040" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1588329767155">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1588329767155" />
     <state x="684" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588325158016">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
