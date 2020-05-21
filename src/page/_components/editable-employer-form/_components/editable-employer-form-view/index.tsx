@@ -41,7 +41,6 @@ export const EditableEmployerFormView = memo(
             <div>
               <label>Должность</label>
               <Field name="work" component="select">
-                <option />
                 <option value="#ff0000">Разработчик</option>
                 <option value="#00ff00">Дизайнер</option>
                 <option value="#0000ff">Аналитик</option>

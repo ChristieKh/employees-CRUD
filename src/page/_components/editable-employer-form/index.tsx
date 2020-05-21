@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import { EditableEmployerFormView } from './_components/editable-employer-form-view';
+import { EmployeesType } from '../../_types';
 
-export class EditableEmployerForm extends Component {
+type PropsType = {
+  person: EmployeesType;
+  addNewPerson: (newEmployee: EmployeesType) => void;
+  deletePerson: () => void;
+  onChangePerson: (employee: any) => void;
+}
+
+export class EditableEmployerForm extends Component<PropsType> {
   handleAddNewEmployer = () => {};
 
   handleDeleteEmployer = () => {};

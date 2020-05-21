@@ -19,17 +19,17 @@ export const Page = memo(() => {
     [activePersonId],
   );
 
-  const addNewPerson = (newEmployees: EmployeesType) =>
-    setEmployees([...employees, newEmployees]);
+  const addNewPerson = (newEmployee: EmployeesType) =>
+    setEmployees([...employees, newEmployee]);
 
-  const handleRemoveItem = () => {
+  const deletePerson = () => {
     // console.info('employeesData', employeesData, activeItem);
     // employeesData.splice(activeItem, 1);
     // this.setState({employees});
     // e.preventDefault();
   };
 
-  const handleChangeItem = (dataItem: any) => {
+  const onChangePerson = (employee: any) => {
     // const {employeesData, activeItem} = this.state;
     // let newData = employeesData;
     // const newDataItem = newData[activeItem];
@@ -60,10 +60,10 @@ export const Page = memo(() => {
           </div>
           <div className={cn(`${COMPONENT_STYLE_NAME}__form-box`)}>
             <EditableEmployerForm
-              data={employees[activePersonId - 1]}
-              onAddItem={addNewPerson}
-              onDeleteItem={handleRemoveItem}
-              onChangeItem={handleChangeItem}
+              person={employees[activePersonId - 1]}
+              addNewPerson={addNewPerson}
+              deletePerson={deletePerson}
+              onChangePerson={onChangePerson}
             />
           </div>
         </div>
