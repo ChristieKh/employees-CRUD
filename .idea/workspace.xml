@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee997a5-07c3-4686-bfb7-97425a77f9f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/_components/edit-form/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.stylelintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -38,7 +39,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553668223817" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -50,17 +51,19 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/page/_constants" />
       <recent name="$PROJECT_DIR$/src/page/_components" />
       <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/editable-employer-form" />
       <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card" />
       <recent name="$PROJECT_DIR$/src/page/_components/cards-employees" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -131,7 +134,9 @@
       <workItem from="1553857426068" duration="1810000" />
       <workItem from="1587912387695" duration="6341000" />
       <workItem from="1588273553341" duration="3860000" />
-      <workItem from="1588325337700" duration="6625000" />
+      <workItem from="1588325337700" duration="6655000" />
+      <workItem from="1590067386264" duration="2769000" />
+      <workItem from="1590074262157" duration="223000" />
     </task>
     <task id="LOCAL-00001" summary="refactoring #1">
       <created>1553619481587</created>
@@ -175,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588329749523</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="new refactoring - new form">
+      <created>1588444964196</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588444964196</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,45 +199,46 @@
     <MESSAGE value="new refactoring" />
     <MESSAGE value="new refactoring&#10;&#10;added styles" />
     <MESSAGE value="new refactoring - card" />
-    <option name="LAST_COMMIT_MESSAGE" value="new refactoring - card" />
+    <MESSAGE value="new refactoring - new form" />
+    <option name="LAST_COMMIT_MESSAGE" value="new refactoring - new form" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="628" y="297" key="#ESLint" timestamp="1588347921388">
+    <state x="628" y="297" key="#ESLint" timestamp="1590073091825">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="628" y="297" key="#ESLint/0.0.1792.1120@0.0.1792.1120" timestamp="1588347921388" />
+    <state x="628" y="297" key="#ESLint/0.0.1792.1120@0.0.1792.1120" timestamp="1590073091825" />
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588327913240">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1588327913240" />
-    <state x="347" y="154" key="CommitChangelistDialog2" timestamp="1588329749213">
+    <state x="347" y="154" key="CommitChangelistDialog2" timestamp="1588444964028">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="347" y="154" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1588329749213" />
+    <state x="347" y="154" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1588444964028" />
     <state x="548" y="345" key="EditFileWatcherDialog" timestamp="1588347964243">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="548" y="345" key="EditFileWatcherDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1588347964243" />
-    <state width="1771" height="328" key="GridCell.Tab.0.bottom" timestamp="1588423929040">
+    <state width="1771" height="328" key="GridCell.Tab.0.bottom" timestamp="1588444977534">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1588423929040" />
-    <state width="1771" height="328" key="GridCell.Tab.0.center" timestamp="1588423929039">
+    <state width="1771" height="328" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1588444977534" />
+    <state width="1771" height="328" key="GridCell.Tab.0.center" timestamp="1588444977533">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1588423929039" />
-    <state width="1771" height="328" key="GridCell.Tab.0.left" timestamp="1588423929038">
+    <state width="1771" height="328" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1588444977533" />
+    <state width="1771" height="328" key="GridCell.Tab.0.left" timestamp="1588444977532">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1588423929038" />
-    <state width="1771" height="328" key="GridCell.Tab.0.right" timestamp="1588423929040">
+    <state width="1771" height="328" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1588444977532" />
+    <state width="1771" height="328" key="GridCell.Tab.0.right" timestamp="1588444977533">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1588423929040" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1588329767155">
+    <state width="1771" height="328" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1588444977533" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1588444967646">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1588329767155" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1588444967646" />
     <state x="684" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588325158016">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
