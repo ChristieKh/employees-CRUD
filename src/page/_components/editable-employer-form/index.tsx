@@ -6,7 +6,7 @@ export class EditableEmployerForm extends Component {
 
   handleDeleteEmployer = () => {};
 
-  onSubmit = (values) => {
+  onSubmit = (values: any) => {
     // console.info('values', values);
   };
 

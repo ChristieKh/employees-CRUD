@@ -6,4 +6,4 @@ const cn = classnames.bind(styles);
 
 const STYLE_NAME = 'Editable-employer-form-view';
 
-export const EditForm = memo(({}) => <div> </div>);
+export const EditForm = memo(() => <div> </div>);

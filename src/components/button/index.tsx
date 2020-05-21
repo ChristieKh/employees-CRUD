@@ -11,7 +11,7 @@ type ButtonType = 'button' | 'submit' | 'reset';
 type PropsType = {
   text: string;
   type: ButtonType;
-  handleClick: () => void;
+  handleClick?: () => void;
 };
 
 export const Button = memo(

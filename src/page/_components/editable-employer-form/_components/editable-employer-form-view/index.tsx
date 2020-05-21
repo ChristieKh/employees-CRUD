@@ -8,15 +8,26 @@ const cn = classnames.bind(styles);
 
 const STYLE_NAME = 'Editable-employer-form-view';
 
+type PropsType = {
+  handleAddNewEmployer: () => void;
+  handleDeleteEmployer: () => void;
+  onSubmit: (values: any) => void;
+};
+
 export const EditableEmployerFormView = memo(
-  ({ handleAddNewEmployer, handleDeleteEmployer, onSubmit }) => (
+  ({ handleAddNewEmployer, handleDeleteEmployer, onSubmit }: PropsType) => (
     <div className={cn(STYLE_NAME)}>
       <div className={cn(`${STYLE_NAME}__buttons`)}>
         <Button
+          type="button"
           text="Добавить нового сотрудника"
           handleClick={handleAddNewEmployer}
         />
-        <Button text="Удалить сотрудника" handleClick={handleDeleteEmployer} />
+        <Button
+          type="button"
+          text="Удалить сотрудника"
+          handleClick={handleDeleteEmployer}
+        />
       </div>
       <Form
         onSubmit={onSubmit}
