@@ -2,7 +2,8 @@ import React, { memo, useState, useCallback } from 'react';
 import classnames from 'classnames/bind';
 import { CardsEmployees } from './_components/cards-employees';
 import { EditableEmployerForm } from './_components/editable-employer-form';
-import { employeesData } from './_constants/employees';
+import { EMPLOYEES } from './_constants';
+import { EmployeesType } from './_types';
 import styles from './index.module.scss';
 
 const cn = classnames.bind(styles);
@@ -10,29 +11,25 @@ const cn = classnames.bind(styles);
 const COMPONENT_STYLE_NAME = 'Page';
 
 export const Page = memo(() => {
-  const [employees, setEmployees] = useState(employeesData);
+  const [employees, setEmployees] = useState(EMPLOYEES);
+  const [activePersonId, setActiveItem] = useState(0);
 
-  const [activeItem, setActiveItem] = useState(null);
-
-  const selectItem = useCallback(
-    (id) => setActiveItem(id !== activeItem ? id : null),
-    [activeItem],
+  const choosePerson = useCallback(
+    (id) => setActiveItem(id !== activePersonId ? id : 0),
+    [activePersonId],
   );
 
-  const handleAddItem = (data) => {
-    const nextItem = [...this.state.data, data];
-    this.setState({ employeesData: nextItem });
-  };
+  const addNewPerson = (newEmployees: EmployeesType) =>
+    setEmployees([...employees, newEmployees]);
 
   const handleRemoveItem = () => {
-    console.info('employeesData', employeesData, activeItem);
-
+    // console.info('employeesData', employeesData, activeItem);
     // employeesData.splice(activeItem, 1);
     // this.setState({employees});
     // e.preventDefault();
   };
 
-  const handleChangeItem = (dataItem) => {
+  const handleChangeItem = (dataItem: any) => {
     // const {employeesData, activeItem} = this.state;
     // let newData = employeesData;
     // const newDataItem = newData[activeItem];
@@ -56,15 +53,15 @@ export const Page = memo(() => {
         <div className={cn(`${COMPONENT_STYLE_NAME}__content`)}>
           <div className={cn(`${COMPONENT_STYLE_NAME}__cards-box`)}>
             <CardsEmployees
-              employeesData={employees}
-              selectItem={selectItem}
-              activeItem={activeItem}
+              employees={employees}
+              choosePerson={choosePerson}
+              activePersonId={activePersonId}
             />
           </div>
           <div className={cn(`${COMPONENT_STYLE_NAME}__form-box`)}>
             <EditableEmployerForm
-              data={employees[activeItem - 1]}
-              onAddItem={handleAddItem}
+              data={employees[activePersonId - 1]}
+              onAddItem={addNewPerson}
               onDeleteItem={handleRemoveItem}
               onChangeItem={handleChangeItem}
             />
