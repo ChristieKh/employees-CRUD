@@ -1,10 +1,28 @@
 .Item-card {
-  &__block {
-    display: flex;
-  }
+  display: flex;
 
   &__label {
     padding-right: 10px;
     font-weight: 600
+  }
+
+  &__person {
+    width: 35%;
+  }
+
+  &__project {
+    width: 20%;
+  }
+
+  &__job-position {
+    width: 20%;
+  }
+
+  &__birthday {
+    width: 15%;
+  }
+
+  &__actions {
+    width: 10%;
   }
 }

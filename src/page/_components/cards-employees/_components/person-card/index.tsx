@@ -17,87 +17,22 @@ type PropsType = {
 export const PersonCard = memo(
   ({ person, work, birthday, gender, employ }: PropsType) => (
     <div className={cn(COMPONENT_STYLE_NAME)}>
-      <div
-        className={cn(
-          `${COMPONENT_STYLE_NAME}__block`,
-          `${COMPONENT_STYLE_NAME}__person`,
-        )}
-      >
-        <p
-          className={cn(
-            `${COMPONENT_STYLE_NAME}__label`,
-            `${COMPONENT_STYLE_NAME}__person-label`,
-          )}
-        >
-          ФИО сотрудника:
-        </p>
+      <div className={cn(`${COMPONENT_STYLE_NAME}__person`)}>
         <p className={cn(`${COMPONENT_STYLE_NAME}__person-text`)}>{person}</p>
       </div>
-      <div
-        className={cn(
-          `${COMPONENT_STYLE_NAME}__block`,
-          `${COMPONENT_STYLE_NAME}__work`,
-        )}
-      >
-        <p
-          className={cn(
-            `${COMPONENT_STYLE_NAME}__label`,
-            `${COMPONENT_STYLE_NAME}__work-label`,
-          )}
-        >
-          Должность:
-        </p>
-        <p className={cn(`${COMPONENT_STYLE_NAME}__work-text`)}>{work}</p>
+        <div className={cn(`${COMPONENT_STYLE_NAME}__project`)}>
+            <p className={cn(`${COMPONENT_STYLE_NAME}__project-text`)}>{'Name Project'}</p>
+        </div>
+      <div className={cn(`${COMPONENT_STYLE_NAME}__job-position`)}>
+        <p className={cn(`${COMPONENT_STYLE_NAME}__job-position-text`)}>{work}</p>
       </div>
-      <div
-        className={cn(
-          `${COMPONENT_STYLE_NAME}__block`,
-          `${COMPONENT_STYLE_NAME}__birthday`,
-        )}
-      >
-        <p
-          className={cn(
-            `${COMPONENT_STYLE_NAME}__label`,
-            `${COMPONENT_STYLE_NAME}__birthday-label`,
-          )}
-        >
-          Дата рождения:{' '}
-        </p>
+      <div className={cn(`${COMPONENT_STYLE_NAME}__birthday`)}>
         <p className={cn(`${COMPONENT_STYLE_NAME}__birthday-text`)}>
           {birthday}
         </p>
       </div>
-      <div
-        className={cn(
-          `${COMPONENT_STYLE_NAME}__block`,
-          `${COMPONENT_STYLE_NAME}__gender`,
-        )}
-      >
-        <p
-          className={cn(
-            `${COMPONENT_STYLE_NAME}__label`,
-            `${COMPONENT_STYLE_NAME}__gender-label`,
-          )}
-        >
-          Пол:
-        </p>
-        <p className={cn(`${COMPONENT_STYLE_NAME}__gender-text`)}>{gender}</p>
-      </div>
-      <div
-        className={cn(
-          `${COMPONENT_STYLE_NAME}__block`,
-          `${COMPONENT_STYLE_NAME}__employ`,
-        )}
-      >
-        <p
-          className={cn(
-            `${COMPONENT_STYLE_NAME}__label`,
-            `${COMPONENT_STYLE_NAME}__employ-label`,
-          )}
-        >
-          Уволен:
-        </p>
-        <p className={cn(`${COMPONENT_STYLE_NAME}__employ-text`)}>{employ}</p>
+      <div className={cn(`${COMPONENT_STYLE_NAME}__actions`)}>
+        <p className={cn(`${COMPONENT_STYLE_NAME}__actions-text`)}>{'actions'}</p>
       </div>
     </div>
   ),

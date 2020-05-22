@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aee997a5-07c3-4686-bfb7-97425a77f9f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/person-card/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/_types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.paths.json" afterDir="false" />
+    <list default="true" id="aee997a5-07c3-4686-bfb7-97425a77f9f0" name="Default Changelist" comment="rewrite all components to ts">
+      <change afterPath="$PROJECT_DIR$/src/_assets/fonts/LatoRegular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_assets/fonts/latobold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_assets/images/menu-after.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_components/icons/edit/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_components/icons/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/font-imports.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/index.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card/ItemCard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/person-card/index.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/_components/cards-employees/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/_components/edit-form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/_components/edit-form/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/_constants/employees.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_constants/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/_components/button/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/_components/button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/person-card/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/person-card/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/person-card/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/_components/person-card/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/_components/cards-employees/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/cards-employees/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/_components/editable-employer-form/_components/editable-employer-form-view/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +37,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1b5C5d0h15aLH3DLfQbpsha7OcT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -54,7 +51,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553668223817" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/_components/icons" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,13 +68,16 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/components/button" />
       <recent name="$PROJECT_DIR$/src/page/_constants" />
       <recent name="$PROJECT_DIR$/src/page/_components" />
       <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/editable-employer-form" />
-      <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/_components/icons" />
+      <recent name="$PROJECT_DIR$/src/styles" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/page/_components/cards-employees/_components/item-card" />
     </key>
@@ -163,7 +163,7 @@
       <workItem from="1588273553341" duration="3860000" />
       <workItem from="1588325337700" duration="6655000" />
       <workItem from="1590067386264" duration="2769000" />
-      <workItem from="1590074262157" duration="5516000" />
+      <workItem from="1590074262157" duration="10390000" />
     </task>
     <task id="LOCAL-00001" summary="refactoring #1">
       <created>1553619481587</created>
@@ -221,7 +221,28 @@
       <option name="project" value="LOCAL" />
       <updated>1590074832077</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added some settings for linter">
+      <created>1590093354603</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590093354603</updated>
+    </task>
+    <task id="LOCAL-00010" summary="rewrite all components to ts">
+      <created>1590094226931</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590094226931</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed some bugs">
+      <created>1590094930373</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590094930373</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,21 +256,28 @@
     <MESSAGE value="new refactoring - card" />
     <MESSAGE value="new refactoring - new form" />
     <MESSAGE value="added typescript + linter" />
-    <option name="LAST_COMMIT_MESSAGE" value="added typescript + linter" />
+    <MESSAGE value="added some settings for linter" />
+    <MESSAGE value="rewrite all components to ts" />
+    <MESSAGE value="fixed some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some bugs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="297" key="#ESLint" timestamp="1590088433976">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="628" y="297" key="#ESLint/0.0.1792.1120@0.0.1792.1120" timestamp="1590088433976" />
+    <state x="530" y="245" key="#Inspections" timestamp="1590094072842">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="530" y="245" key="#Inspections/0.0.1792.1120@0.0.1792.1120" timestamp="1590094072842" />
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588327913240">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1588327913240" />
-    <state x="347" y="154" key="CommitChangelistDialog2" timestamp="1590074831793">
+    <state x="347" y="154" key="CommitChangelistDialog2" timestamp="1590094930258">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="347" y="154" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1590074831793" />
+    <state x="347" y="154" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1590094930258" />
     <state x="48" y="101" key="DiffContextDialog" timestamp="1590074813130">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -258,37 +286,37 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="548" y="345" key="EditFileWatcherDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1588347964243" />
-    <state width="1771" height="328" key="GridCell.Tab.0.bottom" timestamp="1590093229625">
+    <state width="1771" height="328" key="GridCell.Tab.0.bottom" timestamp="1590149694945">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1590093229625" />
-    <state width="1771" height="328" key="GridCell.Tab.0.center" timestamp="1590093229624">
+    <state width="1771" height="328" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1590149694945" />
+    <state width="1771" height="328" key="GridCell.Tab.0.center" timestamp="1590149694944">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1590093229624" />
-    <state width="1771" height="328" key="GridCell.Tab.0.left" timestamp="1590093229623">
+    <state width="1771" height="328" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1590149694944" />
+    <state width="1771" height="328" key="GridCell.Tab.0.left" timestamp="1590149694943">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1590093229623" />
-    <state width="1771" height="328" key="GridCell.Tab.0.right" timestamp="1590093229625">
+    <state width="1771" height="328" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1590149694943" />
+    <state width="1771" height="328" key="GridCell.Tab.0.right" timestamp="1590149694944">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="328" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1590093229625" />
+    <state width="1771" height="328" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1590149694944" />
     <state x="397" y="199" key="SettingsEditor" timestamp="1590092057664">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1590092057664" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1590074853106">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1590094933995">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1590074853106" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1590094933995" />
     <state x="684" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588325158016">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="684" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1588325158016" />
-    <state x="597" y="315" width="823" height="490" key="find.popup" timestamp="1590093274961">
+    <state x="597" y="315" width="823" height="490" key="find.popup" timestamp="1590149561198">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="597" y="315" width="823" height="490" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1590093274961" />
+    <state x="597" y="315" width="823" height="490" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1590149561198" />
   </component>
 </project>

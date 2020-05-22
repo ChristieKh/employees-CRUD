@@ -1,7 +1,7 @@
 import React, { memo, useState, useCallback } from 'react';
 import classnames from 'classnames/bind';
 import { CardsEmployees } from './_components/cards-employees';
-import { EditableEmployerForm } from './_components/editable-employer-form';
+// import { EditableEmployerForm } from './_components/editable-employer-form';
 import { EMPLOYEES } from './_constants';
 import { EmployeesType } from './_types';
 import styles from './index.module.scss';
@@ -48,7 +48,7 @@ export const Page = memo(() => {
     <div className={cn(COMPONENT_STYLE_NAME)}>
       <div className={cn(`${COMPONENT_STYLE_NAME}__wrapper`)}>
         <div className={cn(`${COMPONENT_STYLE_NAME}__title`)}>
-          <h1 className={cn('Text')}>Список сотрудников</h1>
+          <h1 className={cn('Text')}>Employee</h1>
         </div>
         <div className={cn(`${COMPONENT_STYLE_NAME}__content`)}>
           <div className={cn(`${COMPONENT_STYLE_NAME}__cards-box`)}>
@@ -58,14 +58,14 @@ export const Page = memo(() => {
               activePersonId={activePersonId}
             />
           </div>
-          <div className={cn(`${COMPONENT_STYLE_NAME}__form-box`)}>
-            <EditableEmployerForm
-              person={employees[activePersonId - 1]}
-              addNewPerson={addNewPerson}
-              deletePerson={deletePerson}
-              onChangePerson={onChangePerson}
-            />
-          </div>
+          {/*<div className={cn(`${COMPONENT_STYLE_NAME}__form-box`)}>*/}
+            {/*<EditableEmployerForm*/}
+            {/*  person={employees[activePersonId - 1]}*/}
+            {/*  addNewPerson={addNewPerson}*/}
+            {/*  deletePerson={deletePerson}*/}
+            {/*  onChangePerson={onChangePerson}*/}
+            {/*/>*/}
+          {/*</div>*/}
         </div>
       </div>
     </div>

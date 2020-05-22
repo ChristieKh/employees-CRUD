@@ -104,13 +104,15 @@ module.exports = {
     'security/detect-object-injection': 0,
     'security/detect-non-literal-regexp': 0,
     'security/detect-non-literal-fs-filename': 0,
-  },
-  settings: {
-    'import/resolver': {
-      alias: {
-        map: [['@', './src']],
-        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
       },
-    },
+    ],
   },
 };
