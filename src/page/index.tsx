@@ -12,7 +12,7 @@ export const Page = memo(() => (
   <div className={cn(COMPONENT_STYLE_NAME)}>
     <div className={cn(`${COMPONENT_STYLE_NAME}__wrapper`)}>
       <div className={cn(`${COMPONENT_STYLE_NAME}__title`)}>
-        <h1 className={cn('Text')}>Employee</h1>
+        <h1 className={cn('Text')}>Employees</h1>
       </div>
       <div className={cn(`${COMPONENT_STYLE_NAME}__content`)}>
         <div className={cn(`${COMPONENT_STYLE_NAME}__menu`)}>

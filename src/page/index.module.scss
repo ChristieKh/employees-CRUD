@@ -9,6 +9,10 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 
+  &__title {
+    padding: 24px 40px 0;
+  }
+
   &__content {
     display: flex;
     padding-top: 20px;
@@ -31,6 +35,6 @@
 .Text {
   margin: 0;
   padding: 10px;
-  font-size: 2.5rem;
-  text-align: center;
+  font-size: 2rem;
+  text-align: left;
 }

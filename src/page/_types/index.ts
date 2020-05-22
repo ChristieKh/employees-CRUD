@@ -3,6 +3,5 @@ export type EmployeesType = {
   person: string;
   work: string;
   birthday: string;
-  gender: string;
-  employ: boolean;
+  project: string;
 };
