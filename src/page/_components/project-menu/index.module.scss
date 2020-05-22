@@ -1,0 +1,32 @@
+.Project-menu {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 30px 30px 20px;
+
+  &__all-employees {
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f3f4f5;
+      border-radius: 8px;
+    }
+  }
+
+  &__title-project {
+    color: #d0cedb;
+    font-weight: 600;
+    padding-top: 30px;
+  }
+
+  &__item {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f3f4f5;
+      border-radius: 8px;
+    }
+  }
+}

@@ -1,11 +1,11 @@
-html, body, #id {
+html, body, #root {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: Lato, Arial, sans-serif;
 }
 
-p {
+p, h1, h2, h3, h4, h5 {
   padding: 0;
   margin: 0;
 }
