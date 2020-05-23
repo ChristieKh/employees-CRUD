@@ -9,8 +9,8 @@ const COMPONENT_STYLE_NAME = 'Project-menu';
 
 export const ProjectMenu = memo(() => (
   <div className={cn(COMPONENT_STYLE_NAME)}>
-    <div className={cn(`${COMPONENT_STYLE_NAME}__all-employees`)}>
-      <p>All employees</p>
+    <div className={cn(`${COMPONENT_STYLE_NAME}__text-all`)}>
+      <h4>ALL EMPLOYEES</h4>
     </div>
     <div className={cn(`${COMPONENT_STYLE_NAME}__title-project`)}>
       <h4>PROJECT</h4>

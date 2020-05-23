@@ -1,3 +1,5 @@
+@import "./src/styles/media.module.scss";
+
 .Page {
   display: flex;
   justify-content: center;
@@ -6,7 +8,8 @@
     background: #f6f5f8;
     width: 85%;
     margin: 44px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
   }
 
   &__title {
@@ -23,14 +26,27 @@
   }
 
   &__menu {
-    width: 35%;
+    width: 30%;
     margin-bottom: 30px;
   }
 
   &__cards-box {
-    width: 65%;
+    width: 70%;
   }
 }
+
+@media #{$max-tablet} {
+  .Page {
+    &__menu {
+      display: none;
+    }
+
+    &__cards-box {
+      width: 100%;
+    }
+  }
+}
+
 
 .Text {
   margin: 0;

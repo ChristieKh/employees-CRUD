@@ -1,3 +1,28 @@
-.Header {
+@import "./src/styles/mixins.module.scss";
 
+.Header {
+  @include reset-default-styles();
+  display: flex;
+  padding: 0 15px 15px;
+  font-weight: 700;
+  color: #616163;
+  font-size: 13px;
+
+  &__cell {
+    &-employee {
+      width: 40%;
+    }
+
+    &-project {
+      width: 20%;
+    }
+
+    &-job {
+      width: 20%;
+    }
+
+    &-birthday {
+      width: 20%;
+    }
+  }
 }

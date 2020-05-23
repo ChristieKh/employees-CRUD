@@ -1,3 +1,5 @@
+@import "./src/styles/media.module.scss";
+
 .Item-card {
   display: flex;
 
@@ -6,16 +8,26 @@
     font-weight: 600
   }
 
+  &__cell {
+    padding-right: 8px;
+  }
+
   &__person {
     width: 40%;
+    padding-right: 5px;
+  }
+
+  &__project-info {
+    display: flex;
+    width: 45%
   }
 
   &__project {
-    width: 20%;
+    width: 55%;
   }
 
   &__job-position {
-    width: 20%;
+    width: 45%;
   }
 
   &__birthday {
@@ -33,5 +45,28 @@
 
   &__edit {
     padding-right: 10px;
+  }
+}
+
+@media #{$max-tablet} {
+  .Item-card {
+    &__person {
+      width: 45%;
+    }
+
+    &__project-info {
+      flex-direction: column;
+      width: 30%
+    }
+
+    &__birthday {
+      width: 20%;
+    }
+  }
+}
+
+@media #{$mobile} {
+  .Item-card {
+    flex-direction: column;
   }
 }

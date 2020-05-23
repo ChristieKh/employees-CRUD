@@ -1,4 +1,4 @@
-import React, {memo, useMemo} from 'react';
+import React, { memo, useMemo } from 'react';
 import classnames from 'classnames/bind';
 import { EMPLOYEES } from '../../_constants';
 import { PersonCard } from './_components/person-card';

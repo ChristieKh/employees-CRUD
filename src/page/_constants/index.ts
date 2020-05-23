@@ -3,7 +3,7 @@ import { EmployeesType } from '../_types';
 export const EMPLOYEES: Array<EmployeesType> = [
   {
     id: 1,
-    person: 'Печорин Роман Денисович',
+    person: 'Печоринский Роман Денисович',
     work: 'Разработчик',
     birthday: '2014-02-01',
     project: 'Project 1',
@@ -21,6 +21,25 @@ export const EMPLOYEES: Array<EmployeesType> = [
     work: 'Тестировщик',
     birthday: '1994-01-01',
     project: 'Project 1',
+  },
+];
+
+export const HEADER_EMPLOYEE_CARD = [
+  {
+    id: 1,
+    name: 'employee',
+  },
+  {
+    id: 2,
+    name: 'project',
+  },
+  {
+    id: 3,
+    name: 'job',
+  },
+  {
+    id: 4,
+    name: 'birthday',
   },
 ];
 
