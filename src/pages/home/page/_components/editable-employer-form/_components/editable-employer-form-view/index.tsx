@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Form, Field } from 'react-final-form';
 import classnames from 'classnames/bind';
-import { Button } from '../../../../../_components/button';
+import { Button } from '../../../../../../../_components/button';
 import styles from './index.module.scss';
 
 const cn = classnames.bind(styles);

@@ -1,4 +1,4 @@
-@import "./src/styles/media.module.scss";
+@import "../../../../../../../styles/media.module";
 
 .Item-card {
   display: flex;
@@ -6,6 +6,11 @@
   &__label {
     padding-right: 10px;
     font-weight: 600
+  }
+
+  &__info {
+    display: flex;
+    width: 95%;
   }
 
   &__cell {
@@ -65,8 +70,21 @@
   }
 }
 
+@media #{$min-tablet} {
+  .Item-card {
+    &__info {
+      flex-direction: column;
+      width: 85%;
+    }
+  }
+}
+
 @media #{$mobile} {
   .Item-card {
-    flex-direction: column;
+    //flex-direction: column;
+
+    //&__info {
+    //  width: 85%;
+    //}
   }
 }

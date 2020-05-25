@@ -1,6 +1,6 @@
-import { EmployeesType } from '../_types';
+import { EmployeeDataType } from '../../_redux';
 
-export const EMPLOYEES: Array<EmployeesType> = [
+export const EMPLOYEES: Array<EmployeeDataType> = [
   {
     id: 1,
     person: 'Печоринский Роман Денисович',

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import { EmployeeDataType } from '../../../_redux';
 import { EditableEmployerFormView } from './_components/editable-employer-form-view';
-import { EmployeesType } from '../../_types';
 
 type PropsType = {
-  person: EmployeesType;
-  addNewPerson: (newEmployee: EmployeesType) => void;
+  person: EmployeeDataType;
+  addNewPerson: (newEmployee: EmployeeDataType) => void;
   deletePerson: () => void;
   onChangePerson: (employee: any) => void;
-}
+};
 
 export class EditableEmployerForm extends Component<PropsType> {
   handleAddNewEmployer = () => {};
