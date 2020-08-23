@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { EmployeeDataType } from '../../../_redux';
+import { EmployeeDataType } from '../../../_redux/employees-module';
 import { EditableEmployerFormView } from './_components/editable-employer-form-view';
 
 type PropsType = {
