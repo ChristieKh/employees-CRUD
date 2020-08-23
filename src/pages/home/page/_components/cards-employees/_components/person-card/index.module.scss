@@ -1,6 +1,6 @@
 @import "../../../../../../../styles/media.module";
 
-.Item-card {
+.Person-card {
   display: flex;
 
   &__label {
@@ -15,28 +15,11 @@
 
   &__cell {
     padding-right: 8px;
+    width: 25%;
   }
 
   &__person {
-    width: 40%;
-    padding-right: 5px;
-  }
-
-  &__project-info {
-    display: flex;
-    width: 45%
-  }
-
-  &__project {
-    width: 55%;
-  }
-
-  &__job-position {
-    width: 45%;
-  }
-
-  &__birthday {
-    width: 15%;
+    width: 50%;
   }
 
   &__actions {
@@ -50,41 +33,5 @@
 
   &__edit {
     padding-right: 10px;
-  }
-}
-
-@media #{$max-tablet} {
-  .Item-card {
-    &__person {
-      width: 45%;
-    }
-
-    &__project-info {
-      flex-direction: column;
-      width: 30%
-    }
-
-    &__birthday {
-      width: 20%;
-    }
-  }
-}
-
-@media #{$min-tablet} {
-  .Item-card {
-    &__info {
-      flex-direction: column;
-      width: 85%;
-    }
-  }
-}
-
-@media #{$mobile} {
-  .Item-card {
-    //flex-direction: column;
-
-    //&__info {
-    //  width: 85%;
-    //}
   }
 }

@@ -15,8 +15,8 @@ export const ProjectMenu = memo(() => (
     <div className={cn(`${COMPONENT_STYLE_NAME}__title-project`)}>
       <h4>PROJECT</h4>
     </div>
-    {PROJECTS.map(({ name }) => (
-      <div className={cn(`${COMPONENT_STYLE_NAME}__item`)}>
+    {PROJECTS.map(({ name, id }) => (
+      <div className={cn(`${COMPONENT_STYLE_NAME}__item`)} key={id}>
         <p>{name}</p>
       </div>
     ))}

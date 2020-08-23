@@ -6,39 +6,32 @@ export const EMPLOYEES: Array<EmployeeDataType> = [
     person: 'Печоринский Роман Денисович',
     work: 'Разработчик',
     birthday: '2014-02-01',
-    project: 'Project 1',
   },
   {
     id: 2,
     person: 'Васильева Ирина Петровна',
     work: 'Аналитик',
     birthday: '1992-12-25',
-    project: 'Project 3',
   },
   {
     id: 3,
     person: 'Данилов Кирилл Сергеевич',
     work: 'Тестировщик',
     birthday: '1994-01-01',
-    project: 'Project 1',
   },
 ];
 
 export const HEADER_EMPLOYEE_CARD = [
   {
     id: 1,
-    name: 'employee',
+    name: 'person',
   },
   {
     id: 2,
-    name: 'project',
-  },
-  {
-    id: 3,
     name: 'job',
   },
   {
-    id: 4,
+    id: 3,
     name: 'birthday',
   },
 ];

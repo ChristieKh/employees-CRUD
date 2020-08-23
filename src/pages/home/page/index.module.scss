@@ -8,7 +8,7 @@
     background: #f6f5f8;
     width: 85%;
     margin: 44px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
   }
 
@@ -35,7 +35,7 @@
   }
 }
 
-@media #{$max-tablet} {
+@media #{tablet} {
   .Page {
     &__menu {
       display: none;

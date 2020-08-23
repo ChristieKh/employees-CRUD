@@ -7,11 +7,7 @@ const cn = classnames.bind(styles);
 
 const COMPONENT_STYLE_NAME = 'Header';
 
-type PropsType = {
-  cells: Array<string>;
-};
-
-export const Header = memo(({ cells }: PropsType) => (
+export const Header = memo(() => (
   <ul className={cn(COMPONENT_STYLE_NAME)}>
     {HEADER_EMPLOYEE_CARD.map(({ name, id }) => (
       <li key={id} className={cn(`${COMPONENT_STYLE_NAME}__cell-${name}`)}>

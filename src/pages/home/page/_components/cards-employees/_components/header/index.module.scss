@@ -9,20 +9,16 @@
   font-size: 13px;
 
   &__cell {
-    &-employee {
-      width: 38%;
-    }
-
-    &-project {
-      width: 22%;
+    &-person {
+      width: 46%;
     }
 
     &-job {
-      width: 19%;
+      width: 24%;
     }
 
     &-birthday {
-      width: 31%;
+      width: 22%;
     }
   }
 }

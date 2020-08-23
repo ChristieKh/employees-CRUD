@@ -12,5 +12,4 @@ export type EmployeeDataType = {
   person: string;
   work: string;
   birthday: string;
-  project: string;
 };
