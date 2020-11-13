@@ -1,18 +1,14 @@
+import { EMPLOYEES } from '../../_constants';
 import {
   SET_EMPLOYEE_LOADING_START,
   SET_EMPLOYEE_LOADING_STOP,
   SET_EMPLOYEES_DATA,
 } from './actions';
-import { EmployeeDataType, EmployeesStateType } from './_types';
+import { ActionsType, EmployeesStateType } from './_types';
 
-const initialState: EmployeesStateType = {
+export const initialState: EmployeesStateType = {
   isLoading: false,
-  employees: [],
-};
-
-type ActionsType = {
-  type: string;
-  payload?: Array<EmployeeDataType>;
+  employees: EMPLOYEES,
 };
 
 const reducer = (

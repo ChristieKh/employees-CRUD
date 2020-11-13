@@ -1,9 +1,16 @@
+@import "../../styles/colors.module";
+
 .Button {
-  font-size: 14px;
-  padding: 8px 14px;
-  background: #ff8b8b;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: 600;
   outline: none;
+  background: $LightSeaGreen;
+  border: none;
+  border-radius: 17px;
+  height: 100%;
+  padding: 10px 20px;
+  color: $White;
+  font-weight: 800;
+
+  &:hover{
+    cursor: pointer;
+  }
 }

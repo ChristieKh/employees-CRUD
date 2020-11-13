@@ -12,8 +12,10 @@
     border-radius: 10px;
   }
 
-  &__title {
+  &__header {
     padding: 24px 40px 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__content {

@@ -3,7 +3,6 @@ import classnames from 'classnames/bind';
 import styles from './index.module.scss';
 
 const cn = classnames.bind(styles);
-
 const STYLE_NAME = 'Button';
 
 type ButtonType = 'button' | 'submit' | 'reset';

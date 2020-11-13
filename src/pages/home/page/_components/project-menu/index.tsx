@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import classnames from 'classnames/bind';
-import { PROJECTS } from '../../_constants';
 import styles from './index.module.scss';
+import { PROJECTS } from '../../../_constants';
 
 const cn = classnames.bind(styles);
 

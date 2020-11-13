@@ -1,4 +1,4 @@
-import { EmployeeDataType } from '../../_redux/employees-module';
+import { EmployeeDataType } from '../_redux/employees-module/_types';
 
 export const EMPLOYEES: Array<EmployeeDataType> = [
   {

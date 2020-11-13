@@ -1,0 +1,11 @@
+$LightSeaGreen:#11c9ae;
+$Black:#000;
+$Grey:#d5d5d5;
+$White:#fff;
+$ScrollbarThumbColor:#808080;
+
+
+@mixin overlay-background {
+  background-color: $Black;
+  opacity: .37;
+}
