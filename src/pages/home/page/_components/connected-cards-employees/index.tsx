@@ -7,6 +7,7 @@ import {
 } from '../../../_redux/employees-module';
 import { ReduxStoreType } from '../../../_redux/_types';
 import { HEADER_EMPLOYEE_CARD } from '../../../_constants';
+import { Modal } from '../../../../../_components/modal';
 import { PersonCard } from './_components/person-card';
 import { Header } from './_components/header';
 import styles from './index.module.scss';
@@ -19,26 +20,50 @@ type PropsType = {
   employees: Array<EmployeeDataType>;
 };
 
-// eslint-disable-next-line react/prefer-stateless-function
-export class WrappedComponent extends Component<PropsType> {
+type StateType = {
+  isDeleteModalOpened: boolean;
+};
+
+export class WrappedComponent extends Component<PropsType, StateType> {
+  state = {
+    isDeleteModalOpened: false,
+  };
+
+  handleOpenDeleteModal = () => this.setState({ isDeleteModalOpened: true });
+
+  handleCloseDeleteModal = () => this.setState({ isDeleteModalOpened: false });
+
   render() {
     return (
-      <div className={cn(COMPONENT_STYLE_NAME)}>
-        <Header config={HEADER_EMPLOYEE_CARD} />
-        {this.props.employees.map(({ person, work, birthday, id }) => (
-          <div
-            className={cn(`${COMPONENT_STYLE_NAME}__card`, {
-              [`${COMPONENT_STYLE_NAME}__card-active`]: false,
-            })}
-            key={id}
-            role="button"
-            tabIndex={0}
-            onClick={() => {}}
-          >
-            <PersonCard person={person} work={work} birthday={birthday} />
-          </div>
-        ))}
-      </div>
+      <>
+        <div className={cn(COMPONENT_STYLE_NAME)}>
+          <Header config={HEADER_EMPLOYEE_CARD} />
+          {this.props.employees.map(({ person, work, birthday, id }) => (
+            <div
+              className={cn(`${COMPONENT_STYLE_NAME}__card`, {
+                [`${COMPONENT_STYLE_NAME}__card-active`]: false,
+              })}
+              key={id}
+              role="button"
+              tabIndex={0}
+              onClick={() => {}}
+            >
+              <PersonCard
+                person={person}
+                work={work}
+                birthday={birthday}
+                handleOpenDeleteModal={this.handleOpenDeleteModal}
+              />
+            </div>
+          ))}
+        </div>
+        <Modal
+          isShown={this.state.isDeleteModalOpened}
+          closeModal={this.handleCloseDeleteModal}
+        >
+          <p>Вы действительно хотите удалить сотрудника?</p>
+        </Modal>
+      </>
     );
   }
 }

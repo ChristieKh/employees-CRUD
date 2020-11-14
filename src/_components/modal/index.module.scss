@@ -1,0 +1,49 @@
+@import "../../styles/colors.module";
+@import "../../styles/mixins.module";
+
+.Modal {
+  &__overlay {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.37);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  &__content {
+    background-color: $White;
+    border-radius: 6px;
+    box-shadow: 0 0 26px rgba(0, 0, 0, .19);
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px 20px 34px 34px;
+    position: relative;
+  }
+
+  &__header {
+    padding-bottom: 14px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__close-button {
+    @include button-reset-styles();
+  }
+
+  &__body {
+    padding-right: 14px;
+  }
+}

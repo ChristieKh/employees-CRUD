@@ -4,3 +4,12 @@
   text-decoration: none;
   list-style: none;
 }
+
+@mixin button-reset-styles {
+  border: none;
+  background: inherit;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

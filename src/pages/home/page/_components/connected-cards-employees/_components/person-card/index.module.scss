@@ -1,4 +1,5 @@
 @import "../../../../../../../styles/media.module";
+@import "../../../../../../../styles/mixins.module";
 
 .Person-card {
   display: flex;
@@ -28,7 +29,7 @@
   }
 
   &__edit, &__delete {
-    cursor: pointer;
+    @include button-reset-styles();
   }
 
   &__edit {
