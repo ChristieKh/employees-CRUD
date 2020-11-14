@@ -1,0 +1,15 @@
+@import "../../styles/colors.module";
+@import "../../styles/mixins.module";
+
+.Input {
+  padding: 10px;
+  border: 1px solid $DarkGrey;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    border: 1px solid $LightSeaGreen;
+  }
+}

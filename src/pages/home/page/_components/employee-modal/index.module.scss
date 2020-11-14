@@ -1,0 +1,18 @@
+.Employee-modal {
+  &__buttons {
+    padding-top: 20px;
+    display: flex;
+  }
+
+  &__button {
+    padding-right: 15px;
+  }
+
+  &__form {
+    padding-top: 20px;
+  }
+
+  &__field {
+    padding-bottom: 10px;
+  }
+}
