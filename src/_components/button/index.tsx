@@ -6,15 +6,17 @@ const cn = classnames.bind(styles);
 const STYLE_NAME = 'Button';
 
 type ButtonType = 'button' | 'submit' | 'reset';
+type ButtonVariant = 'accent' | 'interface';
 
 type PropsType = {
   text: string;
   type: ButtonType;
   handleClick?: () => void;
+  variant?: ButtonVariant;
 };
 
 export const Button = memo(
-  ({ text, type = 'button', handleClick }: PropsType) => {
+  ({ text, type = 'button', handleClick, variant = 'accent' }: PropsType) => {
     const onClick = useCallback(
       (event) => {
         event.stopPropagation();
@@ -28,7 +30,15 @@ export const Button = memo(
 
     return (
       <button
-        className={cn(STYLE_NAME)}
+        className={cn(
+          STYLE_NAME,
+          {
+            [`${STYLE_NAME}__accent`]: variant === 'accent',
+          },
+          {
+            [`${STYLE_NAME}__interface`]: variant === 'interface',
+          },
+        )}
         type={type} //eslint-disable-line
         onClick={onClick}
       >

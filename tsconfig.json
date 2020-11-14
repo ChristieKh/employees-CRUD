@@ -16,7 +16,8 @@
     "noEmit": true,
     "jsx": "react",
     "module": "esnext",
-    "strict": true
+    "strict": true,
+    "strictNullChecks": false
   },
   "include": [
     "src"

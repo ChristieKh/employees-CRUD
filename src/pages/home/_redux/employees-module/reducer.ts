@@ -3,12 +3,15 @@ import {
   SET_EMPLOYEE_LOADING_START,
   SET_EMPLOYEE_LOADING_STOP,
   SET_EMPLOYEES_DATA,
+  SELECT_EMPLOYEE_ACTION,
+  RESET_SELECTED_EMPLOYEE_ACTION, DELETE_EMPLOYEE_ACTION,
 } from './actions';
 import { ActionsType, EmployeesStateType } from './_types';
 
 export const initialState: EmployeesStateType = {
   isLoading: false,
   employees: EMPLOYEES,
+  selectedEmployee: NaN,
 };
 
 const reducer = (
@@ -23,7 +26,14 @@ const reducer = (
       return { ...state, isLoading: false };
 
     case SET_EMPLOYEES_DATA:
+    case DELETE_EMPLOYEE_ACTION:
       return { ...state, employees: payload };
+
+    case SELECT_EMPLOYEE_ACTION:
+      return { ...state, selectedEmployee: payload };
+
+    case RESET_SELECTED_EMPLOYEE_ACTION:
+      return { ...state, selectedEmployee: initialState.selectedEmployee };
 
     default:
       return state;

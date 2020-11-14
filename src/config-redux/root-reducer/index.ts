@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import employeesReducerModule from '../../pages/home/_redux/employees-module';
+import { EMPLOYEES_REDUCER_NAME } from '../../pages/home/_redux/employees-module/_constants';
 
 export default combineReducers({
-  employeesReducerModule,
+  [EMPLOYEES_REDUCER_NAME]: employeesReducerModule,
 });

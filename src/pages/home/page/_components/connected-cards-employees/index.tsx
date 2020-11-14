@@ -2,15 +2,20 @@ import React, { Component } from 'react';
 import classnames from 'classnames/bind';
 import { connect } from 'react-redux';
 import {
+  deleteEmployeeAction,
   EmployeeDataType,
   getEmployeesSelector,
+  selectEmployeeAction,
+  getSelectedEmployeeSelector,
+  resetSelectedEmployeeAction,
 } from '../../../_redux/employees-module';
 import { ReduxStoreType } from '../../../_redux/_types';
 import { HEADER_EMPLOYEE_CARD } from '../../../_constants';
-import { Modal } from '../../../../../_components/modal';
+import { Action, BaseAction } from '../../../../../config-redux/_types';
 import { PersonCard } from './_components/person-card';
 import { Header } from './_components/header';
 import styles from './index.module.scss';
+import { DeleteModal } from './_components/delete-modal';
 
 const cn = classnames.bind(styles);
 
@@ -18,6 +23,10 @@ const COMPONENT_STYLE_NAME = 'Cards-employees';
 
 type PropsType = {
   employees: Array<EmployeeDataType>;
+  selectedEmployee: number;
+  deleteEmployee: Action<Array<EmployeeDataType>>;
+  selectEmployee: Action<number>;
+  resetSelectedEmployee: BaseAction;
 };
 
 type StateType = {
@@ -29,9 +38,25 @@ export class WrappedComponent extends Component<PropsType, StateType> {
     isDeleteModalOpened: false,
   };
 
-  handleOpenDeleteModal = () => this.setState({ isDeleteModalOpened: true });
+  handleOpenDeleteModal = (id: number) => {
+    this.setState({ isDeleteModalOpened: true });
+    this.props.selectEmployee(id);
+  };
 
-  handleCloseDeleteModal = () => this.setState({ isDeleteModalOpened: false });
+  handleCloseDeleteModal = () => {
+    this.setState({ isDeleteModalOpened: false });
+    this.props.resetSelectedEmployee();
+  };
+
+  handleDelete = () => {
+    const { employees, selectedEmployee, deleteEmployee } = this.props;
+
+    const filteredEmployees = employees.filter(
+      ({ id }) => selectedEmployee !== id,
+    );
+    deleteEmployee(filteredEmployees);
+    this.handleCloseDeleteModal();
+  };
 
   render() {
     return (
@@ -53,16 +78,16 @@ export class WrappedComponent extends Component<PropsType, StateType> {
                 work={work}
                 birthday={birthday}
                 handleOpenDeleteModal={this.handleOpenDeleteModal}
+                id={id}
               />
             </div>
           ))}
         </div>
-        <Modal
-          isShown={this.state.isDeleteModalOpened}
+        <DeleteModal
+          isModalOpened={this.state.isDeleteModalOpened}
           closeModal={this.handleCloseDeleteModal}
-        >
-          <p>Вы действительно хотите удалить сотрудника?</p>
-        </Modal>
+          deleteEmployee={this.handleDelete}
+        />
       </>
     );
   }
@@ -70,8 +95,11 @@ export class WrappedComponent extends Component<PropsType, StateType> {
 
 const mapStateToProps = (state: ReduxStoreType) => ({
   employees: getEmployeesSelector(state),
+  selectedEmployee: getSelectedEmployeeSelector(state),
 });
 
-export const ConnectedCardsEmployees = connect(mapStateToProps)(
-  WrappedComponent,
-);
+export const ConnectedCardsEmployees = connect(mapStateToProps, {
+  deleteEmployee: deleteEmployeeAction,
+  selectEmployee: selectEmployeeAction,
+  resetSelectedEmployee: resetSelectedEmployeeAction,
+})(WrappedComponent);

@@ -2,13 +2,16 @@
 
 .Button {
   outline: none;
-  background: $LightSeaGreen;
   border: none;
   border-radius: 17px;
   height: 100%;
   padding: 10px 20px;
-  color: $White;
   font-weight: 800;
+
+  &__accent {
+    background: $LightSeaGreen;
+    color: $White;
+  }
 
   &:hover{
     cursor: pointer;
