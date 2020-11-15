@@ -38,6 +38,10 @@ export const HEADER_EMPLOYEE_CARD = [
 
 export const JOB_LIST = [
   {
+    id: 0,
+    text: '',
+  },
+  {
     id: 1,
     text: 'Разработчик',
   },

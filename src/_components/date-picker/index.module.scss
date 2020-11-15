@@ -1,0 +1,16 @@
+@import "../../styles/colors.module";
+
+:global(.DayPickerInput) {
+  padding: 10px;
+  border: 1px solid $DarkGrey;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+
+  input {
+    border: none;
+    width: 100%;
+    outline: none;
+  }
+}

@@ -6,6 +6,7 @@ import { Button } from '../../../../../_components/button';
 import { InputForm } from '../../../../../_components/input-form';
 import { SelectForm } from '../../../../../_components/select-form';
 import { JOB_LIST } from '../../../_constants';
+import { DatePicker } from '../../../../../_components/date-picker';
 import styles from './index.module.scss';
 
 const cn = classnames.bind(styles);
@@ -35,7 +36,12 @@ export const EmployeeModal = memo(
               className={cn(`${COMPONENT_STYLE_NAME}__form`)}
             >
               <div className={cn(`${COMPONENT_STYLE_NAME}__field`)}>
-                <Field name="name" component={InputForm} id="input-name" />
+                <Field
+                  name="name"
+                  component={InputForm}
+                  id="input-name"
+                  label="Имя сотрудника"
+                />
               </div>
               <div className={cn(`${COMPONENT_STYLE_NAME}__field`)}>
                 <Field
@@ -43,6 +49,14 @@ export const EmployeeModal = memo(
                   component={SelectForm}
                   options={JOB_LIST}
                   id="select-job"
+                  label="Должность"
+                />
+              </div>
+              <div className={cn(`${COMPONENT_STYLE_NAME}__field`)}>
+                <Field
+                  name="bday"
+                  component={DatePicker}
+                  label="Дата рождения"
                 />
               </div>
               <div className={cn(`${COMPONENT_STYLE_NAME}__buttons`)}>

@@ -4,9 +4,9 @@ import { Input } from '../input';
 
 type Props = FieldRenderProps<string, HTMLInputElement>;
 
-export const InputForm = memo(({ input, id }: Props) => (
+export const InputForm = memo(({ input, id, label }: Props) => (
   <>
-    <label htmlFor={id}>Имя сотрудника</label>
+    <label htmlFor={id}>{label}</label>
     <Input input={input} id={id} />
   </>
 ));

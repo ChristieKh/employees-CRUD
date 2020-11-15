@@ -10,9 +10,9 @@ const COMPONENT_STYLE_NAME = 'Select-form';
 type Props = FieldRenderProps<string, HTMLInputElement>;
 
 export const SelectForm = memo(
-  ({ input: { onChange, value }, options, id }: Props) => (
+  ({ input: { onChange, value }, options, id, label }: Props) => (
     <FormControl variant="outlined" className={cn(COMPONENT_STYLE_NAME)}>
-      <label htmlFor={id}>Должность</label>
+      <label htmlFor={id}>{label}</label>
       <Select
         native
         value={value}
