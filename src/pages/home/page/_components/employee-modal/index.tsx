@@ -7,6 +7,7 @@ import { InputForm } from '../../../../../_components/input-form';
 import { SelectForm } from '../../../../../_components/select-form';
 import { JOB_LIST } from '../../../_constants';
 import { DatePicker } from '../../../../../_components/date-picker';
+import { EmployeeDataType } from '../../../_redux/employees-module';
 import styles from './index.module.scss';
 
 const cn = classnames.bind(styles);
@@ -17,8 +18,14 @@ type PropsType = {
   isModalOpened: boolean;
   text?: string;
   closeModal: () => void;
-  onSubmit: (values: any) => void;
+  onSubmit: (values: EmployeeDataType) => void;
 };
+
+const initial = {
+  person: '',
+  work: '',
+  birthday: '',
+}; // TODO: fix
 
 export const EmployeeModal = memo(
   ({ isModalOpened, closeModal, text, onSubmit }: PropsType) => (
@@ -28,7 +35,7 @@ export const EmployeeModal = memo(
       </div>
       <div className={cn(`${COMPONENT_STYLE_NAME}__content`)}>
         <Form
-          initialValues={{}}
+          initialValues={initial}
           onSubmit={onSubmit}
           render={({ handleSubmit }) => (
             <form
@@ -37,7 +44,7 @@ export const EmployeeModal = memo(
             >
               <div className={cn(`${COMPONENT_STYLE_NAME}__field`)}>
                 <Field
-                  name="name"
+                  name="person"
                   component={InputForm}
                   id="input-name"
                   label="Имя сотрудника"
@@ -45,7 +52,7 @@ export const EmployeeModal = memo(
               </div>
               <div className={cn(`${COMPONENT_STYLE_NAME}__field`)}>
                 <Field
-                  name="job"
+                  name="work"
                   component={SelectForm}
                   options={JOB_LIST}
                   id="select-job"
@@ -54,7 +61,7 @@ export const EmployeeModal = memo(
               </div>
               <div className={cn(`${COMPONENT_STYLE_NAME}__field`)}>
                 <Field
-                  name="bday"
+                  name="birthday"
                   component={DatePicker}
                   label="Дата рождения"
                 />

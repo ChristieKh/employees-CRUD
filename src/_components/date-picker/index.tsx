@@ -9,9 +9,10 @@ type Props = FieldRenderProps<string, HTMLInputElement>;
 
 export const DatePicker = memo(
   ({ input: { onChange, value }, label }: Props) => {
-    const onChangeDateValue = useCallback((day: Date) => onChange(day), [
-      onChange,
-    ]);
+    const onChangeDateValue = useCallback(
+      (day: Date) => onChange(day.toDateString()),
+      [onChange],
+    );
 
     return (
       <>

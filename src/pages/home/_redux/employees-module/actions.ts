@@ -25,3 +25,9 @@ export const RESET_SELECTED_EMPLOYEE_ACTION = 'RESET_SELECTED_EMPLOYEE_ACTION';
 export const resetSelectedEmployeeAction: BaseAction = () => ({
   type: RESET_SELECTED_EMPLOYEE_ACTION,
 });
+
+export const ADD_NEW_EMPLOYEE_ACTION = 'ADD_NEW_EMPLOYEE_ACTION';
+export const addNewEmployeeAction: Action<EmployeeDataType> = (payload) => ({
+  type: ADD_NEW_EMPLOYEE_ACTION,
+  payload,
+});

@@ -4,7 +4,9 @@ import {
   SET_EMPLOYEE_LOADING_STOP,
   SET_EMPLOYEES_DATA,
   SELECT_EMPLOYEE_ACTION,
-  RESET_SELECTED_EMPLOYEE_ACTION, DELETE_EMPLOYEE_ACTION,
+  RESET_SELECTED_EMPLOYEE_ACTION,
+  DELETE_EMPLOYEE_ACTION,
+  ADD_NEW_EMPLOYEE_ACTION,
 } from './actions';
 import { ActionsType, EmployeesStateType } from './_types';
 
@@ -34,6 +36,9 @@ const reducer = (
 
     case RESET_SELECTED_EMPLOYEE_ACTION:
       return { ...state, selectedEmployee: initialState.selectedEmployee };
+
+    case ADD_NEW_EMPLOYEE_ACTION:
+      return { ...state, employees: [payload, ...state.employees] };
 
     default:
       return state;

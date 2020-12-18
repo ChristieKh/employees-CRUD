@@ -5,7 +5,7 @@ export type EmployeesStateType = {
 };
 
 export type EmployeeDataType = {
-  id: number;
+  id?: number;
   person: string;
   work: string;
   birthday: string;
