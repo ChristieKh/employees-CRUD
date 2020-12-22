@@ -31,3 +31,17 @@ export const addNewEmployeeAction: Action<EmployeeDataType> = (payload) => ({
   type: ADD_NEW_EMPLOYEE_ACTION,
   payload,
 });
+
+export const CHANGE_INITIAL_EMPLOYEE_ACTION = 'CHANGE_INITIAL_EMPLOYEE_ACTION';
+export const changeInitialEmployeeAction: Action<EmployeeDataType> = (
+  payload,
+) => ({
+  type: CHANGE_INITIAL_EMPLOYEE_ACTION,
+  payload,
+});
+
+export const EDIT_EMPLOYEE_ACTION = 'EDIT_EMPLOYEE_ACTION';
+export const editEmployeeAction: Action<EmployeeDataType> = (payload) => ({
+  type: EDIT_EMPLOYEE_ACTION,
+  payload,
+});

@@ -16,3 +16,8 @@ export const getSelectedEmployeeSelector = createSelector(
   [employeesSelector],
   ({ selectedEmployee }: EmployeesStateType) => selectedEmployee,
 );
+
+export const getInitialEmployee = createSelector(
+  [employeesSelector],
+  ({ initialEmployee }: EmployeesStateType) => initialEmployee,
+);

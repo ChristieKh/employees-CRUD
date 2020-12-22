@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import classnames from 'classnames/bind';
 import { EditIcon, DeleteIcon } from '../../../../../../../_components/icons';
 import styles from './index.module.scss';
@@ -13,11 +13,27 @@ type PropsType = {
   birthday: string;
   id: number;
   handleOpenDeleteModal: (id: number) => void;
+  handleOpenEditModal: (id: number) => void;
 };
 
 export const PersonCard = memo(
-  ({ person, work, birthday, id, handleOpenDeleteModal }: PropsType) => {
-    const openDeleteModal = () => handleOpenDeleteModal(id);
+  ({
+    person,
+    work,
+    birthday,
+    id,
+    handleOpenDeleteModal,
+    handleOpenEditModal,
+  }: PropsType) => {
+    const openDeleteModal = useCallback(() => handleOpenDeleteModal(id), [
+      handleOpenDeleteModal,
+      id,
+    ]);
+
+    const openEditModal = useCallback(() => handleOpenEditModal(id), [
+      handleOpenEditModal,
+      id,
+    ]);
 
     return (
       <div className={cn(STYLE_NAME)}>
@@ -36,9 +52,13 @@ export const PersonCard = memo(
         </div>
 
         <div className={cn(`${STYLE_NAME}__cell`, `${STYLE_NAME}__actions`)}>
-          <div className={cn(`${STYLE_NAME}__edit`)}>
+          <button
+            onClick={openEditModal}
+            type="button"
+            className={cn(`${STYLE_NAME}__edit`)}
+          >
             <EditIcon />
-          </div>
+          </button>
           <button
             onClick={openDeleteModal}
             type="button"

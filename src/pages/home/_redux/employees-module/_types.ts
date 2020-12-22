@@ -2,10 +2,11 @@ export type EmployeesStateType = {
   employees: Array<EmployeeDataType>;
   isLoading: boolean;
   selectedEmployee: number;
+  initialEmployee: EmployeeDataType;
 };
 
 export type EmployeeDataType = {
-  id?: number;
+  id: number;
   person: string;
   work: string;
   birthday: string;
@@ -13,5 +14,5 @@ export type EmployeeDataType = {
 
 export type ActionsType = {
   type: string;
-  payload?: Array<EmployeeDataType>;
+  payload?: EmployeeDataType;
 };

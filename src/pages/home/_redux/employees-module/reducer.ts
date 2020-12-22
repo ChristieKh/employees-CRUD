@@ -7,6 +7,8 @@ import {
   RESET_SELECTED_EMPLOYEE_ACTION,
   DELETE_EMPLOYEE_ACTION,
   ADD_NEW_EMPLOYEE_ACTION,
+  CHANGE_INITIAL_EMPLOYEE_ACTION,
+  EDIT_EMPLOYEE_ACTION,
 } from './actions';
 import { ActionsType, EmployeesStateType } from './_types';
 
@@ -14,6 +16,12 @@ export const initialState: EmployeesStateType = {
   isLoading: false,
   employees: EMPLOYEES,
   selectedEmployee: NaN,
+  initialEmployee: {
+    person: '',
+    work: '',
+    birthday: '',
+    id: 0,
+  },
 };
 
 const reducer = (
@@ -39,6 +47,17 @@ const reducer = (
 
     case ADD_NEW_EMPLOYEE_ACTION:
       return { ...state, employees: [payload, ...state.employees] };
+
+    case CHANGE_INITIAL_EMPLOYEE_ACTION:
+      return { ...state, initialEmployee: payload };
+
+    case EDIT_EMPLOYEE_ACTION:
+      return {
+        ...state,
+        employees: state.employees.map((employee) =>
+          payload.id === employee.id ? payload : employee,
+        ),
+      };
 
     default:
       return state;

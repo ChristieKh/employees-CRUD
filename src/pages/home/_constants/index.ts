@@ -4,19 +4,19 @@ export const EMPLOYEES: Array<EmployeeDataType> = [
   {
     id: 1,
     person: 'Печоринский Роман Денисович',
-    work: 'Разработчик',
+    work: '1',
     birthday: '2014-02-01',
   },
   {
     id: 2,
     person: 'Васильева Ирина Петровна',
-    work: 'Аналитик',
+    work: '2',
     birthday: '1992-12-25',
   },
   {
     id: 3,
     person: 'Данилов Кирилл Сергеевич',
-    work: 'Тестировщик',
+    work: '3',
     birthday: '1994-01-01',
   },
 ];

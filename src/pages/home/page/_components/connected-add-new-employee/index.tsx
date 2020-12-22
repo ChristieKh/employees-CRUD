@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button } from '../../../../../_components/button';
-import { EmployeeModal } from '../employee-modal';
+import { ConnectedEmployeeModal } from '../employee-modal';
 import {
   EmployeeDataType,
   addNewEmployeeAction,
@@ -24,9 +24,7 @@ export class WrappedComponent extends Component<PropsType, StateType> {
   handleCloseModal = () => this.setState({ isOpened: false });
 
   handleSubmit = (values: EmployeeDataType) => {
-    const work = JOB_LIST.find(({ id }) => `${id}` === values.work).text;
-
-    this.props.addNewEmployee({ ...values, work });
+    this.props.addNewEmployee(values);
     this.handleCloseModal();
   };
 
@@ -38,7 +36,7 @@ export class WrappedComponent extends Component<PropsType, StateType> {
           type="button"
           handleClick={this.handleOpenModal}
         />
-        <EmployeeModal
+        <ConnectedEmployeeModal
           isModalOpened={this.state.isOpened}
           closeModal={this.handleCloseModal}
           text="Добавить нового сотрудника"
