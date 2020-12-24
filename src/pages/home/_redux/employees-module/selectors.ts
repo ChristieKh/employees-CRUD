@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 import { ReduxStoreType } from '../_types';
+import { getEmployeesFormatter } from '../_utils/get-employees-formatter';
 import { initialState } from './reducer';
 import { EMPLOYEES_REDUCER_NAME } from './_constants';
 import { EmployeesStateType } from './_types';
@@ -9,7 +10,7 @@ export const employeesSelector = (store: ReduxStoreType) =>
 
 export const getEmployeesSelector = createSelector(
   [employeesSelector],
-  ({ employees }: EmployeesStateType) => employees,
+  ({ employees }: EmployeesStateType) => getEmployeesFormatter(employees),
 );
 
 export const getSelectedEmployeeSelector = createSelector(

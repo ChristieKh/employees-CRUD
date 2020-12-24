@@ -7,12 +7,13 @@ import {
   addNewEmployeeAction,
 } from '../../../_redux/employees-module';
 import { Action } from '../../../../../config-redux/_types';
-import { JOB_LIST } from '../../../_constants';
 
 type PropsType = {
   addNewEmployee: Action<EmployeeDataType>;
 };
-type StateType = {};
+type StateType = {
+  isOpened: boolean;
+};
 
 export class WrappedComponent extends Component<PropsType, StateType> {
   state = {
